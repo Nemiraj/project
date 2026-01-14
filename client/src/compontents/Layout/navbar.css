@@ -1,0 +1,83 @@
+/* ===== RESET & BASE FIXES ===== */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* CRITICAL */
+  -webkit-overflow-scrolling: touch;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== FIX MOBILE CLICK / SCROLL ISSUES ===== */
+body.modal-open {
+  overflow: hidden;
+  touch-action: none;
+}
+
+/* Prevent fixed elements blocking clicks */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* ===== HERO SECTION FIX ===== */
+.hero-section {
+  min-height: calc(100vh - 80px); /* navbar height */
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ===== SEARCH BAR MOBILE FIX ===== */
+@media (max-width: 768px) {
+  .search-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .search-grid > * {
+    border-right: none !important;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .search-grid > *:last-child {
+    border-bottom: none;
+  }
+}
+
+/* ===== MOBILE MENU FIX ===== */
+.mobile-menu {
+  position: relative;
+  z-index: 60;
+}
+
+/* ===== MODAL FIX ===== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+}
+
+/* ===== FIX SECTION OVERLAP ===== */
+section {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== IMAGE FIX ===== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

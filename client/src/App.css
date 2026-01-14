@@ -1,0 +1,50 @@
+/* ================================
+   GLOBAL RESET (IMPORTANT)
+================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ================================
+   ROOT & BODY
+================================ */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #f9fafb; /* light gray */
+  color: #0b58ff;
+}
+
+/* ================================
+   ROOT CONTAINER
+================================ */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================================
+   REMOVE VITE DEMO STYLES ❌
+================================ */
+/* DELETE EVERYTHING BELOW THIS LINE
+   if you still have it anywhere:
+
+.logo
+.card
+.read-the-docs
+@keyframes logo-spin
+*/
+.container {
+  max-width: 80rem; /* 1280px */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
